@@ -42,7 +42,7 @@
 							<td>${restaurante.nomeRestaurante}</td>
 							<td>${restaurante.numeroCep}</td>
 							<td class="d-flex justify-content-end">
-								<a href="#" class="btn btn-success me-2">Detalhes</a>
+								<a href="detalharRestaurante?id=${restaurante.codRestaurante}" class="btn btn-success me-2">Detalhes</a>
 								<a href="editarRestaurante?id=${restaurante.codRestaurante}" class="btn btn-info me-2">Editar</a>
 								<a href="restauranteExcluir?id=${restaurante.codRestaurante}" class="btn btn-danger me-2">Excluir</a>
 							</td>
