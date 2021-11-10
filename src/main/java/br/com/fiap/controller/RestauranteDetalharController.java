@@ -1,7 +1,6 @@
 package br.com.fiap.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,10 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.fiap.business.InsightBusiness;
 import br.com.fiap.business.RestauranteBusiness;
-import br.com.fiap.model.Insight;
+import br.com.fiap.model.Distancia;
 import br.com.fiap.model.Restaurante;
+import br.com.fiap.model.TipoPedido;
 
 @WebServlet("/detalharRestaurante")
 public class RestauranteDetalharController extends HttpServlet {
@@ -37,14 +36,18 @@ public class RestauranteDetalharController extends HttpServlet {
 
         request.setAttribute("detalheRestaurante", restaurante);
         
-        //Java
-  		InsightBusiness InsightBusiness = new InsightBusiness();
-  		List<Insight> listaInsights = InsightBusiness.listarTodos();
-  		
-  		System.out.println("ListaINS " + listaInsights );
+        Distancia distanciaMaisPedidos = new Distancia();
+        Distancia distanciaMenosPedidos = new Distancia();
+        TipoPedido tipoPedidoMaisEntregas = new TipoPedido();
+        TipoPedido tipoPedidoMenosEntregas = new TipoPedido();
+        
+        
   		
   		//Web
-  		request.setAttribute("listaInsights", listaInsights);
+  		request.setAttribute("distanciaMaisPedidos", distanciaMaisPedidos);
+  		request.setAttribute("distanciaMenosPedidos", distanciaMenosPedidos);
+  		request.setAttribute("tipoPedidoMaisEntregas", tipoPedidoMaisEntregas);
+  		request.setAttribute("tipoPedidoMenosEntregas", tipoPedidoMenosEntregas);
 
         RequestDispatcher rd = request.getRequestDispatcher("detalharRestaurante.jsp");
 		

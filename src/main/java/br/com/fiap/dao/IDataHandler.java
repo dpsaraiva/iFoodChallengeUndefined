@@ -13,5 +13,5 @@ public interface IDataHandler<T> {
 	public int delete(int id);
 
 	public int update(T obj);
-	
+
 }

@@ -5,7 +5,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <jsp:useBean id="detalheRestaurante" class="br.com.fiap.model.Restaurante" scope="request" />
-<jsp:useBean id="listaInsights" class="java.util.ArrayList" scope="request"></jsp:useBean>
+
+<jsp:useBean id="distanciaMaisPedidos" class="br.com.fiap.model.Distancia" scope="request"></jsp:useBean>
+<jsp:useBean id="distanciaMenosPedidos" class="br.com.fiap.model.Distancia" scope="request"></jsp:useBean>
+<jsp:useBean id="tipoPedidoMaisEntregas" class="br.com.fiap.model.TipoPedido" scope="request"></jsp:useBean>
+<jsp:useBean id="tipoPedidoMenosEntregas" class="br.com.fiap.model.TipoPedido" scope="request"></jsp:useBean>
 
 <!doctype html>
 <html lang="pt-BR">
@@ -34,26 +38,25 @@
 		<p>Quantidade de entregadores: ${detalheRestaurante.quantidadeEntregadores}</p>
 		<p>Raio de atuação (km): ${detalheRestaurante.raioAtuacaoKm}</p>
 		
-		<c:forEach items="${listaInsights}" var="insight">
-			<div class="card">
-		  		<div class="card-body">
-		   			${insight.insight1}
-		  		</div>
-			</div>
-			
-			<div class="card">
-		  		<div class="card-body">
-		   			${insight.insight2}
-		  		</div>
-			</div>
-			
-			<div class="card">
-		  		<div class="card-body">
-		   			${insight.insight3}
-		  		</div>
-			</div>
-		</c:forEach>
+		<div class="card mb-3">
+	  		<div class="card-body">
+	   			Faixa de distância com mais pedidos: ${distanciaMaisPedidos.inicioFaixaDistancia} km - ${distanciaMaisPedidos.terminoFaixaDistancia} km
+	  		</div>
+		</div>
 		
+		<div class="card mb-3">
+	  		<div class="card-body">
+	   			Faixa de distância com menos pedidos: ${distanciaMenosPedidos.inicioFaixaDistancia} km - ${distanciaMenosPedidos.terminoFaixaDistancia} km
+	  		</div>
+		</div>
+		
+		<div class="card">
+	  		<div class="card-body">
+	   			<p>Tipo de pedido com mais entregas: ${tipoPedidoMaisEntregas.descricaoTipoPedido}</p>
+	   			<p>Tipo de pedido com menos entregas: ${tipoPedidoMenosEntregas.descricaoTipoPedido}</p>
+	  		</div>
+		</div>
+	
 	</div>
 </body>
 </html>
