@@ -53,7 +53,7 @@ public class RestauranteEditarController extends HttpServlet {
             restaurante.setAvaliacao(Integer.parseInt(request.getParameter("avaliacao")));
             restaurante.setQuantidadeCozinheiros(Integer.parseInt(request.getParameter("quantidade-cozinheiros")));
             restaurante.setQuantidadeEntregadores(Integer.parseInt(request.getParameter("quantidade-entregadores")));
-            restaurante.setRaioAtuacaoKm(Integer.parseInt(request.getParameter("raio-atuacao-km")));
+            restaurante.setRaioAtuacaoKm(Double.valueOf(request.getParameter("raio-atuacao-km")));
 
             RestauranteBusiness rb = new RestauranteBusiness();
             rb.editar(restaurante);

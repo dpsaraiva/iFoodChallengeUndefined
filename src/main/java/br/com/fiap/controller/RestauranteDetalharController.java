@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.fiap.business.InsightBusiness;
 import br.com.fiap.business.RestauranteBusiness;
+import br.com.fiap.model.Insight;
 import br.com.fiap.model.Restaurante;
 
 @WebServlet("/detalharRestaurante")
@@ -34,6 +36,15 @@ public class RestauranteDetalharController extends HttpServlet {
         //codRestaurante = restaurante.getCodRestaurante();
 
         request.setAttribute("detalheRestaurante", restaurante);
+        
+        //Java
+  		InsightBusiness InsightBusiness = new InsightBusiness();
+  		List<Insight> listaInsights = InsightBusiness.listarTodos();
+  		
+  		System.out.println("ListaINS " + listaInsights );
+  		
+  		//Web
+  		request.setAttribute("listaInsights", listaInsights);
 
         RequestDispatcher rd = request.getRequestDispatcher("detalharRestaurante.jsp");
 		

@@ -63,7 +63,7 @@
 			</div>
 			<div class="col-sm-2">
 				<label class="mb-2" for="id-raio-atuacao-km">Raio de atuação (km):</label>
-				<input class="form-control form-control-sm mb-3" type="text" value="${restaurante.raioAtuacaoKm}" name="raio-atuacao-km" id="id-raio-atuacao-km">
+				<input class="form-control form-control-sm mb-3" type="number" value="${restaurante.raioAtuacaoKm}" name="raio-atuacao-km" id="id-raio-atuacao-km" step="0.01">
 			</div>
 			<input type="submit" class="btn btn-success mt-3" value="Cadastrar">
 		</form>

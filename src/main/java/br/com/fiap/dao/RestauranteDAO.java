@@ -72,7 +72,6 @@ public class RestauranteDAO implements IDataHandler<Restaurante> {
 			e.printStackTrace();
 		}
 		return null;
-
 	}
 
 	@Override
