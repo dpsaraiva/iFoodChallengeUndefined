@@ -38,6 +38,7 @@ public class RestauranteEditarController extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("editarRestaurante.jsp");
 		
 		rd.forward(request, response);
+		System.out.println("Retorno do metodo doGet2 RestauranteEditarController " + codRestaurante);
 	}
     
     @Override
@@ -54,19 +55,19 @@ public class RestauranteEditarController extends HttpServlet {
             restaurante.setQuantidadeCozinheiros(Integer.parseInt(request.getParameter("quantidade-cozinheiros")));
             restaurante.setQuantidadeEntregadores(Integer.parseInt(request.getParameter("quantidade-entregadores")));
             restaurante.setRaioAtuacaoKm(Double.valueOf(request.getParameter("raio-atuacao-km")));
+            
 
             RestauranteBusiness rb = new RestauranteBusiness();
             rb.editar(restaurante);
             
-          //Java
-          	List<Restaurante> listaRestaurantes = rb.listarTodos();
+            //Java
+            List<Restaurante> listaRestaurantes = rb.listarTodos();
           		
           	System.out.println("Retorno do metodo doPost RestauranteEditarController " + listaRestaurantes);
           		
           	//Web
           	request.setAttribute("listaRestaurantes", listaRestaurantes);
             RequestDispatcher rd = request.getRequestDispatcher("listaRestaurantes.jsp");
-
             rd.forward(request, response);
 
         } catch (Exception e) {

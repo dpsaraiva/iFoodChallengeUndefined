@@ -2,7 +2,6 @@ package br.com.fiap.dao;
 
 import java.util.List;
 
-import br.com.fiap.model.Distancia;
 
 public interface IDataHandler<T> {
 
@@ -15,9 +14,5 @@ public interface IDataHandler<T> {
 	public int delete(int id);
 
 	public int update(T obj);
-
-	Distancia getMaxDistancia(int codigo);
-
-	Distancia getMinDistancia(int codigo);
 
 }

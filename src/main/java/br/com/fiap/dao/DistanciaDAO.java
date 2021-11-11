@@ -8,39 +8,9 @@ import java.util.List;
 import br.com.fiap.model.Distancia;
 import br.com.fiap.model.Restaurante;
 
-public class DistanciaDAO implements IDataHandler<Distancia> {
+public class DistanciaDAO{
 
-	@Override
-	public List<?> getAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Distancia getById(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int add(Distancia obj) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int delete(int id) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int update(Distancia obj) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	
-	@Override
 	public Distancia getMaxDistancia(int codigo) {
 
 		DAO dao = new DAO();
@@ -77,7 +47,6 @@ public class DistanciaDAO implements IDataHandler<Distancia> {
 		return null;
 	}
 	
-	@Override
 	public Distancia getMinDistancia(int codigo) {
 
 		DAO dao = new DAO();

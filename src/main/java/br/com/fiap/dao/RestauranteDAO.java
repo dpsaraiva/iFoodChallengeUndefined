@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.fiap.model.Distancia;
 import br.com.fiap.model.Restaurante;
 
 public class RestauranteDAO implements IDataHandler<Restaurante> {
@@ -151,15 +150,4 @@ public class RestauranteDAO implements IDataHandler<Restaurante> {
 
 	}
 
-	@Override
-	public Distancia getMaxDistancia(int codigo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Distancia getMinDistancia(int codigo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
