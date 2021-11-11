@@ -43,24 +43,24 @@
 		<h1 class="mt-5 mb-4">Insights</h1>
 		<div class="card mb-3">
 	  		<div class="card-body p-2">
-	   			Faixa de distância com mais pedidos: 1.5 km - 2.5 km
+	  			Faixa de distância com mais pedidos: ${distanciaMaisPedidos.inicioFaixaDistancia} km - ${distanciaMaisPedidos.terminoFaixaDistancia} km
 	  		</div>
 		</div>
 		
 		<div class="card mb-3">
 	  		<div class="card-body p-2">
-	   			Faixa de distância com menos pedidos: 4.5 km - 5 km
+	   			Faixa de distância com menos pedidos: ${distanciaMenosPedidos.inicioFaixaDistancia} km - ${distanciaMenosPedidos.terminoFaixaDistancia} km
 	  		</div>
 		</div>
 		
 		<div class="card mb-3">
 	  		<div class="card-body p-2">
-	   			<p>Categoria com mais entregas: Pizza</p>
+	   			<p>Categoria com mais entregas: ${tipoPedidoMaisEntregas.descricaoTipoPedido}</p>
 	  		</div>
 	  	</div>
 	  	<div class="card mb-3">
 	  		<div class="card-body p-2">
-	   			<p>Categoria com menos entregas: Japonesa</p>
+	   			<p>Categoria com menos entregas: ${tipoPedidoMenosEntregas.descricaoTipoPedido}</p>
 	  		</div>	
 		</div>
 </body>

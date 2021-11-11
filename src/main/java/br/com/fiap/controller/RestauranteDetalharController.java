@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.fiap.business.DistanciaBusiness;
 import br.com.fiap.business.RestauranteBusiness;
+import br.com.fiap.business.TipoPedidoBusiness;
 import br.com.fiap.model.Distancia;
 import br.com.fiap.model.Restaurante;
 import br.com.fiap.model.TipoPedido;
@@ -37,15 +38,15 @@ public class RestauranteDetalharController extends HttpServlet {
 
         request.setAttribute("detalheRestaurante", restaurante);
         
-        /*
+        
         Distancia distanciaMaisPedidos = new DistanciaBusiness().pesquisarDistanciaMaxima(codigo);
-        System.out.println("DIST Controller: " + distanciaMaisPedidos);
+        //System.out.println("DIST Controller: " + distanciaMaisPedidos);
         Distancia distanciaMenosPedidos = new DistanciaBusiness().pesquisarDistanciaMinima(codigo);
         
         
         
-        TipoPedido tipoPedidoMaisEntregas = new TipoPedido();
-        TipoPedido tipoPedidoMenosEntregas = new TipoPedido();        
+        TipoPedido tipoPedidoMaisEntregas = new TipoPedidoBusiness().pesquisarPedidoMaisEntregue();
+        TipoPedido tipoPedidoMenosEntregas = new TipoPedidoBusiness().pesquisarPedidoMenosEntregue();       
         
   		
   		//Web
@@ -54,7 +55,7 @@ public class RestauranteDetalharController extends HttpServlet {
   		request.setAttribute("tipoPedidoMaisEntregas", tipoPedidoMaisEntregas);
   		request.setAttribute("tipoPedidoMenosEntregas", tipoPedidoMenosEntregas);
   		
-  		*/
+  		
 
         RequestDispatcher rd = request.getRequestDispatcher("detalharRestaurante.jsp");
 		
