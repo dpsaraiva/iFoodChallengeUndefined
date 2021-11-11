@@ -2,6 +2,7 @@ package br.com.fiap.dao;
 
 import java.util.List;
 
+import br.com.fiap.model.Distancia;
 import br.com.fiap.model.Entrega;
 
 public class EntregaDAO implements IDataHandler<Entrega> {
@@ -34,5 +35,17 @@ public class EntregaDAO implements IDataHandler<Entrega> {
 	public int update(Entrega obj) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public Distancia getMaxDistancia(int codigo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Distancia getMinDistancia(int codigo) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
