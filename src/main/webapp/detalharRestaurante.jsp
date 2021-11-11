@@ -27,8 +27,8 @@
 
 	<div class="container">
 	
-		<h2>Dados do Restaurante:</h2>
-		<a href="listarRestaurantes" class="btn btn-light">Voltar</a>
+		<h1>Dados do Restaurante</h1>
+		<a href="listaRestaurantes" class="btn btn-light">Voltar</a>
 		<p>Nome: ${detalheRestaurante.nomeRestaurante}</p>
 		<p>CEP: ${detalheRestaurante.numeroCep}</p>
 		<p>Número: ${detalheRestaurante.numeroLogradouro}</p>
@@ -38,6 +38,8 @@
 		<p>Quantidade de entregadores: ${detalheRestaurante.quantidadeEntregadores}</p>
 		<p>Raio de atuação (km): ${detalheRestaurante.raioAtuacaoKm}</p>
 		
+		
+		<h1>Insights</h1>
 		<div class="card mb-3">
 	  		<div class="card-body">
 	   			Faixa de distância com mais pedidos: ${distanciaMaisPedidos.inicioFaixaDistancia} km - ${distanciaMaisPedidos.terminoFaixaDistancia} km

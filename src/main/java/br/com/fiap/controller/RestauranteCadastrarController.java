@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.fiap.business.RestauranteBusiness;
 import br.com.fiap.model.Restaurante;
 
-@WebServlet("/cadastrarRestaurante")
+@WebServlet("/cadastraRestaurante")
 public class RestauranteCadastrarController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

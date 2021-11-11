@@ -14,7 +14,7 @@ import br.com.fiap.model.Distancia;
 import br.com.fiap.model.Restaurante;
 import br.com.fiap.model.TipoPedido;
 
-@WebServlet("/detalharRestaurante")
+@WebServlet("/detalhaRestaurante")
 public class RestauranteDetalharController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     

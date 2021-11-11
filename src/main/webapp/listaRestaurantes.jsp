@@ -25,7 +25,7 @@
 	
 		<h1 class="mt-5 mb-4">Restaurantes</h1>
 	
-		<a href="cadastrarRestaurante" class="btn btn-primary mb-3">Novo Restaurante</a>
+		<a href="cadastraRestaurante" class="btn btn-primary mb-3">Novo Restaurante</a>
 		
 		
 		<table class="table table-hover align-middle">
@@ -33,6 +33,8 @@
 				<tr>
 					<th>Nome</th>
 					<th>CEP</th>
+					<th>Número</th>
+					<th>Avaliação</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -41,10 +43,12 @@
 						<tr>
 							<td>${restaurante.nomeRestaurante}</td>
 							<td>${restaurante.numeroCep}</td>
+							<td>${restaurante.numeroLogradouro}</td>
+							<td>${restaurante.avaliacao}</td>
 							<td class="d-flex justify-content-end">
-								<a href="detalharRestaurante?id=${restaurante.codRestaurante}" class="btn btn-success me-2">Detalhes</a>
-								<a href="editarRestaurante?id=${restaurante.codRestaurante}" class="btn btn-info me-2">Editar</a>
-								<a href="restauranteExcluir?id=${restaurante.codRestaurante}" class="btn btn-danger me-2">Excluir</a>
+								<a href="detalhaRestaurante?id=${restaurante.codRestaurante}" class="btn btn-success me-2">Detalhes</a>
+								<a href="editaRestaurante?id=${restaurante.codRestaurante}" class="btn btn-info me-2">Editar</a>
+								<a href="restauranteExclui?id=${restaurante.codRestaurante}" class="btn btn-danger me-2">Excluir</a>
 							</td>
 						</tr>
 					</div>

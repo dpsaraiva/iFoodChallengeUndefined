@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.fiap.business.RestauranteBusiness;
 import br.com.fiap.model.Restaurante;
 
-@WebServlet("/editarRestaurante")
+@WebServlet("/editaRestaurante")
 public class RestauranteEditarController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
