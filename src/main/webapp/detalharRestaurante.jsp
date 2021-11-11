@@ -27,38 +27,41 @@
 
 	<div class="container">
 	
-		<h1>Dados do Restaurante</h1>
-		<a href="listaRestaurantes" class="btn btn-light">Voltar</a>
-		<p>Nome: ${detalheRestaurante.nomeRestaurante}</p>
-		<p>CEP: ${detalheRestaurante.numeroCep}</p>
-		<p>Número: ${detalheRestaurante.numeroLogradouro}</p>
-		<p>Categoria: ${detalheRestaurante.categoriaRestaurante}</p>
-		<p>Avaliação (0 - 10): ${detalheRestaurante.avaliacao}</p>
-		<p>Quantidade de cozinheiros: ${detalheRestaurante.quantidadeCozinheiros}</p>
-		<p>Quantidade de entregadores: ${detalheRestaurante.quantidadeEntregadores}</p>
-		<p>Raio de atuação (km): ${detalheRestaurante.raioAtuacaoKm}</p>
+		<h1 class="mt-5 mb-4">Dados do Restaurante</h1>
+		<a href="listaRestaurantes" class="btn btn-secondary mb-3">Voltar</a>
+		<div class="card p-3">
+			<p><strong>Nome:</strong> ${detalheRestaurante.nomeRestaurante}</p>
+			<p><strong>CEP:</strong> ${detalheRestaurante.numeroCep}</p>
+			<p><strong>Número:</strong> ${detalheRestaurante.numeroLogradouro}</p>
+			<p><strong>Categoria:</strong> ${detalheRestaurante.categoriaRestaurante}</p>
+			<p><strong>Avaliação (0 - 10): </strong> ${detalheRestaurante.avaliacao}</p>
+			<p><strong>Quantidade de cozinheiros: </strong>${detalheRestaurante.quantidadeCozinheiros}</p>
+			<p><strong>Quantidade de entregadores: </strong>${detalheRestaurante.quantidadeEntregadores}</p>
+			<p><strong>Raio de atuação (km):</strong> ${detalheRestaurante.raioAtuacaoKm}</p>
+		</div>
 		
-		
-		<h1>Insights</h1>
+		<h1 class="mt-5 mb-4">Insights</h1>
 		<div class="card mb-3">
-	  		<div class="card-body">
+	  		<div class="card-body p-2">
 	   			Faixa de distância com mais pedidos: ${distanciaMaisPedidos.inicioFaixaDistancia} km - ${distanciaMaisPedidos.terminoFaixaDistancia} km
 	  		</div>
 		</div>
 		
 		<div class="card mb-3">
-	  		<div class="card-body">
+	  		<div class="card-body p-2">
 	   			Faixa de distância com menos pedidos: ${distanciaMenosPedidos.inicioFaixaDistancia} km - ${distanciaMenosPedidos.terminoFaixaDistancia} km
 	  		</div>
 		</div>
 		
-		<div class="card">
-	  		<div class="card-body">
-	   			<p>Tipo de pedido com mais entregas: ${tipoPedidoMaisEntregas.descricaoTipoPedido}</p>
-	   			<p>Tipo de pedido com menos entregas: ${tipoPedidoMenosEntregas.descricaoTipoPedido}</p>
+		<div class="card mb-3">
+	  		<div class="card-body p-2">
+	   			<p>Categoria com mais entregas: ${tipoPedidoMaisEntregas.descricaoTipoPedido}</p>
 	  		</div>
+	  	</div>
+	  	<div class="card mb-3">
+	  		<div class="card-body p-2">
+	   			<p>Categoria com menos entregas: ${tipoPedidoMenosEntregas.descricaoTipoPedido}</p>
+	  		</div>	
 		</div>
-	
-	</div>
 </body>
 </html>
