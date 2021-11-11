@@ -16,13 +16,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Restaurantes</title>
+    <title>Editar Restaurante</title>
   </head>
 <body>
 
 	<div class="container">		
-		<h1 class="mt-5 mb-4">Cadastro de Restaurante</h1>
-		<a href="listaRestaurantes" class="btn btn-light">Voltar</a>
+		<h1 class="mt-5 mb-4">Editar Restaurante</h1>
 		<form action="editarRestaurante" method="post">
 			<div class="d-flex flex-column bd-highlight mb-3 col-sm-7">
 				<label for="id-nome-restaurante" class="mt-3">Nome:</label>
@@ -65,7 +64,10 @@
 				<label class="mb-2" for="id-raio-atuacao-km">Raio de atuação (km):</label>
 				<input class="form-control form-control-sm mb-3" type="number" value="${restaurante.raioAtuacaoKm}" name="raio-atuacao-km" id="id-raio-atuacao-km" step="0.01">
 			</div>
-			<input type="submit" class="btn btn-success mt-3" value="Salvar">
+			<div class="mt-3">
+				<input type="submit" class="btn btn-success" value="Salvar">
+				<a href="listaRestaurantes" class="btn btn-danger">Cancelar</a>
+			</div>
 		</form>
 	</div>
 </body>
