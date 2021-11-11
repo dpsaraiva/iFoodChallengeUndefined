@@ -2,13 +2,6 @@ package br.com.fiap.model;
 
 import java.io.Serializable;
 
-/**
- * Classe que abstrai o Pedido
- * 
- * @author Dionney Saraiva, Jorge Zarlenga, Maria Eduarda e Rodrigo Valori
- * @version 1.0
- */
-
 public class Distancia implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -60,12 +53,8 @@ public class Distancia implements Serializable {
 		this.terminoFaixaDistancia = terminoFaixaDistancia;
 	}
 
-	// Metodos CRUD:
-	
-	
-
 	// Metodo toString:
-	
+
 	@Override
 	public String toString() {
 		return "Distancia [codDistancia=" + codDistancia + ", inicioFaixaDistancia=" + inicioFaixaDistancia

@@ -1,18 +1,6 @@
 package br.com.fiap.model;
 
-
 import java.io.Serializable;
-import java.time.LocalTime;
-import java.util.List;
-
-import br.com.fiap.dao.RestauranteDAO;
-
-/**
- * Classe que abstrai o Restaurante
- * 
- * @author Dionney Saraiva, Jorge Zarlenga, Maria Eduarda e Rodrigo Valori
- * @version 1.0
- */
 
 public class Restaurante implements Serializable {
 
@@ -38,8 +26,9 @@ public class Restaurante implements Serializable {
 
 	// Construtor que recebe todos parametros:
 
-	public Restaurante(int codRestaurante, String nomeRestaurante, String numeroCep, String numeroLogradouro, String categoriaRestaurante, int avaliacao,
-			int quantidadeCozinheiros, int quantidadeEntregadores, double raioAtuacaoKm) {
+	public Restaurante(int codRestaurante, String nomeRestaurante, String numeroCep, String numeroLogradouro,
+			String categoriaRestaurante, int avaliacao, int quantidadeCozinheiros, int quantidadeEntregadores,
+			double raioAtuacaoKm) {
 		super();
 		this.codRestaurante = codRestaurante;
 		this.nomeRestaurante = nomeRestaurante;
@@ -126,35 +115,6 @@ public class Restaurante implements Serializable {
 		this.raioAtuacaoKm = raioAtuacaoKm;
 	}
 
-	// Metodos CRUD:
-
-	public int adicionaRestaurante() {
-		RestauranteDAO aDao = new RestauranteDAO();
-		return aDao.add(this);
-	}
-
-	public int alteraRestaurante() {
-		RestauranteDAO aDao = new RestauranteDAO();
-		return aDao.update(this);
-	}
-
-	public int deletaRestaurante(int codigo) {
-		RestauranteDAO aDao = new RestauranteDAO();
-		return aDao.delete(codigo);
-	}
-
-	public List<Restaurante> visualizarRestaurante(){
-		RestauranteDAO aDao = new RestauranteDAO();
-		return aDao.getAll();
-	}
-
-
-	public Restaurante selecionaRestaurante(int id) {
-		RestauranteDAO aDao = new RestauranteDAO();
-		return aDao.getById(id);
-	}
-
-	
 	// Metodo toString:
 
 	@Override
@@ -164,8 +124,5 @@ public class Restaurante implements Serializable {
 				+ categoriaRestaurante + ", avaliacao=" + avaliacao + ", quantidadeCozinheiros=" + quantidadeCozinheiros
 				+ ", quantidadeEntregadores=" + quantidadeEntregadores + ", raioAtuacaoKm=" + raioAtuacaoKm + "]";
 	}
-
-	
-
 
 }

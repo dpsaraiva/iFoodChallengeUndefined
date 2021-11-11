@@ -20,8 +20,8 @@
 
 	<div class="container">		
 		<h1 class="mt-5 mb-4">Cadastro de Restaurante</h1>
-		<a href="listaRestaurantes" class="btn btn-secondary">Voltar</a>
-		<form action="cadastraRestaurante" method="post">
+		<a href="listarRestaurantes" class="btn btn-secondary">Voltar</a>
+		<form action="cadastrarRestaurante" method="post">
 			<div class="d-flex flex-column bd-highlight mb-3 col-sm-7">
 				<label for="id-nome-restaurante" class="mt-3">Nome:</label>
 				<input class ="form-control form-control-sm mt-2"type="text" name="nome-restaurante" id="id-nome-restaurante" width="400px">

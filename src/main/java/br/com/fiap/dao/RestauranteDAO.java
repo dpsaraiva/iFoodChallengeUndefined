@@ -83,7 +83,7 @@ public class RestauranteDAO implements IDataHandler<Restaurante> {
 			PreparedStatement stmt = dao.getConnection().prepareStatement(
 					"INSERT INTO T_RESTAURANTE(CD_RESTAURANTE, NM_RESTAURANTE, NR_CEP, NR_LOGRADOURO, DS_CATEGORIA_RESTAURANTE, NR_AVALIACAO, "
 							+ "NR_COZINHEIROS, NR_ENTREGADORES, NR_RAIO_ATUACAO_KM) VALUES (CD_RESTAURANTE.NEXTVAL,?,?,?,?,?,?,?,?)");
-			//stmt.setInt(1, 1);
+			// stmt.setInt(1, 1);
 			stmt.setString(1, obj.getNomeRestaurante());
 			stmt.setString(2, obj.getNumeroCep());
 			stmt.setString(3, obj.getNumeroLogradouro());
@@ -126,8 +126,8 @@ public class RestauranteDAO implements IDataHandler<Restaurante> {
 		DAO dao = new DAO();
 
 		try {
-			PreparedStatement stmt = dao.getConnection()
-					.prepareStatement("UPDATE T_RESTAURANTE SET NM_RESTAURANTE = ?, NR_CEP = ?, NR_LOGRADOURO = ?, DS_CATEGORIA_RESTAURANTE = ?, NR_AVALIACAO = ?,"
+			PreparedStatement stmt = dao.getConnection().prepareStatement(
+					"UPDATE T_RESTAURANTE SET NM_RESTAURANTE = ?, NR_CEP = ?, NR_LOGRADOURO = ?, DS_CATEGORIA_RESTAURANTE = ?, NR_AVALIACAO = ?,"
 							+ "NR_COZINHEIROS = ?, NR_ENTREGADORES = ?, NR_RAIO_ATUACAO_KM = ? WHERE CD_RESTAURANTE = ?");
 			stmt.setString(1, obj.getNomeRestaurante());
 			stmt.setString(2, obj.getNumeroCep());
@@ -138,9 +138,9 @@ public class RestauranteDAO implements IDataHandler<Restaurante> {
 			stmt.setInt(7, obj.getQuantidadeEntregadores());
 			stmt.setDouble(8, obj.getRaioAtuacaoKm());
 			stmt.setInt(9, obj.getCodRestaurante());
-			
+
 			return dao.executeCommand(stmt);
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

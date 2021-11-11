@@ -13,26 +13,26 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.fiap.business.RestauranteBusiness;
 import br.com.fiap.model.Restaurante;
 
-@WebServlet("/listaRestaurantes")
+@WebServlet("/listarRestaurantes")
 public class RestauranteExibirController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public RestauranteExibirController() {
-        super();
-    }
 
-    @Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-    	//Java
+	public RestauranteExibirController() {
+		super();
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		RestauranteBusiness restauranteBusiness = new RestauranteBusiness();
 		List<Restaurante> listaRestaurantes = restauranteBusiness.listarTodos();
-		
+
 		System.out.println("LISTA: " + listaRestaurantes);
-		
-		//Web
+
 		request.setAttribute("listaRestaurantes", listaRestaurantes);
-		RequestDispatcher rd = request.getRequestDispatcher("listaRestaurantes.jsp");  
+		RequestDispatcher rd = request.getRequestDispatcher("listaRestaurantes.jsp");
 		rd.forward(request, response);
 	}
+
 }

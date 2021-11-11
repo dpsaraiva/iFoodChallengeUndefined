@@ -8,77 +8,75 @@ import java.sql.SQLException;
 
 public class DAO {
 
-    private Connection connection;
+	private Connection connection;
 
-    public DAO() {
+	public DAO() {
 
-        try {
-           // Class.forName("oracle.jbdc.driver.OracleDriver");
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 
-    public Connection getConnection() {
-        
-        openConnection();
-        System.out.println("Conectado com sucesso!");
-        return this.connection;
-    }
+	public Connection getConnection() {
 
-    // Responsavel por abrir a conexão
-    private void openConnection() {
-        
-        try {
-            this.connection = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL", "RM87129", "060899");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+		openConnection();
+		System.out.println("Conectado com sucesso!");
+		return this.connection;
+	}
 
-    private void closeConnection() {
-        
-        try {
-            if (this.connection != null) {
-                this.connection.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+	private void openConnection() {
 
-    // Executa comandos SQL (insert, update, delete)
-    public int executeCommand(PreparedStatement stmt) {
-        
-        int j = 0;
-        
-        try {
-            j = stmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            closeConnection();
-        }
-        
-        return j;
-    }
+		try {
+			this.connection = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL", "RM87129",
+					"060899");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 
-    public ResultSet getData(PreparedStatement stmt) {
-        
-        ResultSet resultSet = null;
-        
-        try {
-            resultSet = stmt.executeQuery();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        
-        return resultSet;
-    }
-    
-    public void closeConnectionGetAll() {
-        closeConnection();
-    }
+	private void closeConnection() {
+
+		try {
+			if (this.connection != null) {
+				this.connection.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public int executeCommand(PreparedStatement stmt) {
+
+		int j = 0;
+
+		try {
+			j = stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeConnection();
+		}
+
+		return j;
+	}
+
+	public ResultSet getData(PreparedStatement stmt) {
+
+		ResultSet resultSet = null;
+
+		try {
+			resultSet = stmt.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return resultSet;
+	}
+
+	public void closeConnectionGetAll() {
+		closeConnection();
+	}
 
 }

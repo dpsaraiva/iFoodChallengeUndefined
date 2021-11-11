@@ -3,13 +3,6 @@ package br.com.fiap.model;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-/**
- * Classe que abstrai o Entrega
- * 
- * @author Dionney Saraiva, Jorge Zarlenga, Maria Eduarda e Rodrigo Valori
- * @version 1.0
- */
-
 public class Entrega implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -51,16 +44,11 @@ public class Entrega implements Serializable {
 		this.dataHoraEntrega = dataHoraEntrega;
 	}
 
-	// Metodos CRUD:
-
-	
-
 	// Metodo toString:
-	
+
 	@Override
 	public String toString() {
-		return "Entrega [codEntrega=" + codEntrega + ", dataHoraEntrega="
-				+ dataHoraEntrega + "]";
+		return "Entrega [codEntrega=" + codEntrega + ", dataHoraEntrega=" + dataHoraEntrega + "]";
 	}
-	
+
 }

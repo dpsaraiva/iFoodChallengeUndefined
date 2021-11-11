@@ -28,7 +28,7 @@
 	<div class="container">
 	
 		<h1 class="mt-5 mb-4">Dados do Restaurante</h1>
-		<a href="listaRestaurantes" class="btn btn-secondary mb-3">Voltar</a>
+		<a href="listarRestaurantes" class="btn btn-secondary mb-3">Voltar</a>
 		<div class="card p-3">
 			<p><strong>Nome:</strong> ${detalheRestaurante.nomeRestaurante}</p>
 			<p><strong>CEP:</strong> ${detalheRestaurante.numeroCep}</p>

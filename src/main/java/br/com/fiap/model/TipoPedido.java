@@ -2,13 +2,6 @@ package br.com.fiap.model;
 
 import java.io.Serializable;
 
-/**
- * Classe que abstrai o TipoPedido
- * 
- * @author Dionney Saraiva, Jorge Zarlenga, Maria Eduarda e Rodrigo Valori
- * @version 1.0
- */
-
 public class TipoPedido implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -50,12 +43,8 @@ public class TipoPedido implements Serializable {
 		this.descricaoTipoPedido = descricaoTipoPedido;
 	}
 
-	// Metodos CRUD:
-	
-	
-
 	// Metodo toString:
-	
+
 	@Override
 	public String toString() {
 		return "TipoPedido [codTipoPedido=" + codTipoPedido + ", descricaoTipoPedido=" + descricaoTipoPedido + "]";
